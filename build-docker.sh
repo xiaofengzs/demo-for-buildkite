@@ -1,8 +1,13 @@
 #!/bin/bash
 
+DOCKER_IMAGE=tr1stanzhi/buildkite-demo
+
 echo "build docker image"
-docker build -t="zxf/demo_app" .
+docker build -t="${DOCKER_IMAGE}" ./
+docker tag ${DOCKER_IMAGE} ${DOCKER_IMAGE}:lastest
 
 echo "run docker image"
-docker run -i -t -p 8080:8080 zxf/demo_app /bin/bash
+docker run ${DOCKER_IMAGE}
 
+echo "push docker image"
+docker push ${DOCKER_IMAGE}:lastest

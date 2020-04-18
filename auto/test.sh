@@ -1,4 +1,6 @@
 #!/bin/sh
 
-./mvnw clean
-./mvnw test
+./build-docker.sh
+
+
+
