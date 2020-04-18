@@ -2,8 +2,11 @@ steps:
   - label: "test"
     command:
       - "./auto/./test.sh"
+
   - block: "dev"
-    command: "./upload-docker.sh"
+    branches: "master"
+
+  - command: "./upload-docker.sh"
 
 # build stage
 # 1. build a image, upload docker hub
