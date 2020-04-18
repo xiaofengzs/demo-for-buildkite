@@ -5,9 +5,6 @@ steps:
 
   - block: "dev"
     branches: "master"
-
-  - command: "./upload-docker.sh"
-
 # build stage
 # 1. build a image, upload docker hub
 # 2. agent pull this image than build and test
