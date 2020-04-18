@@ -1,6 +1,6 @@
 #!/bin/bash
 
-DOCKER_IMAGE=tr1stanzhi/buildkite-demo
+export DOCKER_IMAGE=tr1stanzhi/buildkite-demo
 
 echo "build docker image"
 docker build -t="${DOCKER_IMAGE}" ./
