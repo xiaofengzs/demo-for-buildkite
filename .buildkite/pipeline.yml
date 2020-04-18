@@ -1,0 +1,3 @@
+steps:
+  - label: "test"
+    command: "./auto/./test.sh"
